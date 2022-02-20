@@ -7,7 +7,7 @@ Enjoy it!<br>
 
 <p><strong>Check out my App on GH-Pages:</strong> <a href="https://karton92.github.io/terrarist-shop/" target="_blank">https://karton92.github.io/terrarist-shop/</a></p>
 
-<h2>Stack</h2><br>
+<h2>Stack:</h2>
 1. React<br>
 2. Javascript<br>
 3. Redux<br>
