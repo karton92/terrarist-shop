@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/terrarist-shop/static/css/main.22eabe70.css",
+    "main.js": "/terrarist-shop/static/js/main.8ccb1800.js",
+    "index.html": "/terrarist-shop/index.html",
+    "main.22eabe70.css.map": "/terrarist-shop/static/css/main.22eabe70.css.map",
+    "main.8ccb1800.js.map": "/terrarist-shop/static/js/main.8ccb1800.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22eabe70.css",
+    "static/js/main.8ccb1800.js"
+  ]
+}
