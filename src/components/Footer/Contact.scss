@@ -1,0 +1,45 @@
+.footer-contact {
+  width: 600px;
+  transition: ease 0.3s;
+  @media only screen and (max-width: 600px) {
+    width: 475px;
+  }
+  @media only screen and (max-width: 475px) {
+    flex-direction: column;
+    width: 300px;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+input {
+  width: 100%;
+  font-size: 25px;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+textarea {
+  font-size: 25px;
+  height: 6em;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+button {
+  background-color: rgb(168, 197, 89);
+}
+
+div[role="alert"] {
+  color: red;
+  margin-top: 1em;
+}
+
+.message-chars-left {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
