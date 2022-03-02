@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/terrarist-shop/static/css/main.0f51ec3e.css",
-    "main.js": "/terrarist-shop/static/js/main.44369eff.js",
+    "main.css": "/terrarist-shop/static/css/main.124252a5.css",
+    "main.js": "/terrarist-shop/static/js/main.ee383504.js",
     "static/media/slide1.jpg": "/terrarist-shop/static/media/slide1.0ec4fe595f5ed4b44d2f.jpg",
     "static/media/logo2.png": "/terrarist-shop/static/media/logo2.4faff62bbad01e71cbf2.png",
-    "static/media/logo.png": "/terrarist-shop/static/media/logo.8e973ddfdb5ba67c6141.png",
     "index.html": "/terrarist-shop/index.html",
-    "main.0f51ec3e.css.map": "/terrarist-shop/static/css/main.0f51ec3e.css.map",
-    "main.44369eff.js.map": "/terrarist-shop/static/js/main.44369eff.js.map"
+    "main.124252a5.css.map": "/terrarist-shop/static/css/main.124252a5.css.map",
+    "main.ee383504.js.map": "/terrarist-shop/static/js/main.ee383504.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f51ec3e.css",
-    "static/js/main.44369eff.js"
+    "static/css/main.124252a5.css",
+    "static/js/main.ee383504.js"
   ]
 }
