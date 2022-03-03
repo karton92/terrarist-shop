@@ -3,10 +3,6 @@ import "./NavbarDesktop.scss";
 import { Link } from "react-scroll";
 
 const NavbarDesktop = ({ section, setSection }) => {
-  // const handleSection = (item) => {
-  //   setSection(item);
-  // };
-
   const navData = [
     {
       title: "Home",

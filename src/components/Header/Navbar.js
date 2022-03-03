@@ -1,38 +1,29 @@
 import React from "react";
-import { BarChart, Facebook, Instagram } from "@mui/icons-material";
 import "./Navbar.scss";
 import logo2 from "../../images/logo2.png";
 import { Link } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 import NavbarDesktop from "./NavbarDesktop";
+import NavbarMobile from "./NavbarMobile";
+import Icons from "./Icons";
 
 const Navbar = ({ section, setSection }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 426px)" });
+
+  const handleNavbar = () => {
+    if (isMobile) {
+      return <NavbarMobile section={section} setSection={setSection} />;
+    }
+    return <NavbarDesktop section={section} setSection={setSection} />;
+  };
+
   return (
     <div className="navbar">
       <Link to="header" spy={true} smooth={true} offset={-100} duration={500}>
         <img className="logo" src={logo2} alt="logo" />
       </Link>
-
-      <NavbarDesktop section={section} setSection={setSection} />
-
-      <div className="toggle-menu">
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://www.instagram.com/valhallageckos/"
-        >
-          <Instagram />
-        </a>
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://www.facebook.com/ValhallaGeckos"
-        >
-          <Facebook />
-        </a>
-        <a href="#">
-          <BarChart className="toggle-icon" />
-        </a>
-      </div>
+      {handleNavbar()}
+      <Icons />
     </div>
   );
 };
