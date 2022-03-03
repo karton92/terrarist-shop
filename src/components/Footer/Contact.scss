@@ -1,4 +1,9 @@
 .footer-contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5px;
   width: 600px;
   transition: ease 0.3s;
   @media only screen and (max-width: 600px) {
@@ -9,6 +14,7 @@
     width: 300px;
   }
   form {
+    text-align: center;
     width: 100%;
   }
 }
@@ -19,6 +25,10 @@ input {
   margin: 5px 0;
   padding: 10px;
   border-radius: 6px;
+  @media only screen and (max-width: 475px) {
+    padding: 6px;
+    font-size: 14px;
+  }
 }
 textarea {
   font-size: 25px;
@@ -27,10 +37,24 @@ textarea {
   margin: 5px 0;
   padding: 10px;
   border-radius: 6px;
+  @media only screen and (max-width: 475px) {
+    padding: 6px;
+    font-size: 14px;
+  }
 }
 
-button {
-  background-color: rgb(168, 197, 89);
+.submit-input {
+  text-align: center;
+  width: 200px;
+  text-transform: uppercase;
+  background-color: rgb(183, 193, 18);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  &:hover {
+    transform: scale(105%);
+  }
 }
 
 div[role="alert"] {
@@ -42,4 +66,8 @@ div[role="alert"] {
   width: 100%;
   margin: auto;
   text-align: left;
+}
+
+p {
+  text-align: center;
 }

@@ -3,10 +3,10 @@ import "./Header.scss";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
 
-const Header = ({ setSection }) => {
+const Header = ({ section, setSection }) => {
   return (
     <header className="header" id="header">
-      <Navbar setSection={setSection} />
+      <Navbar section={section} setSection={setSection} />
       <Slider />
     </header>
   );

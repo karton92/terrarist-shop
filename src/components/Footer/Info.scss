@@ -1,7 +1,22 @@
 .footer-info-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  width: auto;
+}
+
+.footer-info-icon {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  width: 300px;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px 0;
+  svg {
+    font-size: 50px;
+    color: rgb(183, 193, 18);
+    margin-right: 10px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
