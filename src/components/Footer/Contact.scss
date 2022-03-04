@@ -40,12 +40,14 @@ textarea {
   @media only screen and (max-width: 475px) {
     padding: 6px;
     font-size: 14px;
+    height: 6em;
   }
 }
 
 .submit-input {
   text-align: center;
-  width: 200px;
+  width: 280px;
+  max-height: 65px;
   text-transform: uppercase;
   background-color: rgb(183, 193, 18);
   color: white;
@@ -54,6 +56,19 @@ textarea {
   transition: ease-in-out 0.3s;
   &:hover {
     transform: scale(105%);
+  }
+  @media only screen and (max-width: 475px) {
+    width: 100%;
+  }
+}
+
+.captcha {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media only screen and (max-width: 475px) {
+    justify-content: center;
   }
 }
 

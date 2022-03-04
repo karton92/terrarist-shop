@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import slide1 from "../../images/slide1.jpg";
 import "./Slider.scss";
@@ -25,9 +25,30 @@ const sliderData = [
 ];
 
 function Slider() {
+  const carouselRef = useRef(null);
+  const onNextStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the last item, go to first item
+      carouselRef.current.goTo(0);
+    }
+  };
+
+  const onPrevStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the first item, go to last item
+      carouselRef.current.goTo(sliderData.length);
+    }
+  };
   return (
     <div className="slider-container">
-      <Carousel>
+      <Carousel
+        ref={carouselRef}
+        enableAutoPlay={true}
+        autoPlaySpeed={6000}
+        onPrevStart={onPrevStart}
+        onNextStart={onNextStart}
+        disableArrowsOnEnd={false}
+      >
         {sliderData.map((item) => (
           <div
             className="slider-item"

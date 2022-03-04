@@ -19,4 +19,12 @@
   p {
     font-size: 20px;
   }
+  @media only screen and (max-width: 475px) {
+    svg {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
 }

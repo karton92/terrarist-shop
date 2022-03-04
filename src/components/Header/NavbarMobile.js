@@ -16,10 +16,6 @@ import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRound
 import "./NavbarMobile.scss";
 //TEST
 const NavbarMobile = ({ section, setSection }) => {
-  const [state, setState] = useState({
-    top: false,
-  });
-
   const [open, setOpen] = useState(false);
 
   const anchor = "top";
