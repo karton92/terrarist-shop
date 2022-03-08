@@ -1,0 +1,27 @@
+.sub-menu-contianer {
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  .view-all {
+    display: none;
+    @media (max-width: 426px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+        font-size: 25px;
+        background-color: rgb(183, 193, 18);
+        color: white;
+        margin-left: 5px;
+        border-radius: 15%;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

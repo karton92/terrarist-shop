@@ -16,13 +16,23 @@
   }
 }
 
+.logo-container {
+  @media only screen and (max-width: 426px) {
+    order: 2;
+  }
+}
+
 ul {
   display: flex;
+  align-items: center;
   @media only screen and (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
   }
   li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     margin: 10px;
     font-weight: 600;

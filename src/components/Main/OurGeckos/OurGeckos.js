@@ -1,16 +1,24 @@
 import React from "react";
+import ItemCard from "./ItemCardGeckos";
 import "./OurGeckos.scss";
+import { Geckos } from "../../utils/Data";
 
 function OurGeckos() {
   return (
     <div className="geckos">
-      <h1>Nasze gekony</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nam,
-        provident minus veniam aut enim deleniti cupiditate suscipit. Quod
-        voluptatum veritatis repellat magni totam earum iusto fuga laudantium
-        provident recusandae.
-      </p>
+      <h2>Pod naszą opieką są:</h2>
+      <div className="geckos-container">
+        {Geckos.map((item) => (
+          <ItemCard
+            name={item.name}
+            species={item.species}
+            morph={item.morph}
+            sex={item.sex}
+            imgSrc={item.imgSrc}
+            date={item.date}
+          />
+        ))}
+      </div>
     </div>
   );
 }

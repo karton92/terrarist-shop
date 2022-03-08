@@ -73,36 +73,41 @@ const NavbarMobile = ({ section, setSection }) => {
     >
       <List className="list-container">
         {navData.map((item, index) => (
-          <ListItem button key={item.title} className="list-item">
-            <ListItemIcon>
-              {index % 2 === 0 ? (
-                <InboxIcon style={{ fontSize: 30 }} />
-              ) : (
-                <MailIcon style={{ fontSize: 30 }} />
-              )}
-            </ListItemIcon>
-            <ListItemText>
-              <li className="list-li">
-                <Link
-                  style={{ color: `rgba(255, 255, 255, 0.8)`, fontSize: 20 }}
-                  to={item.toWaypoint}
-                  spy={true}
-                  smooth={true}
-                  offset={item.offsetValue}
-                  duration={500}
-                  onClick={() => handleList(item.setSectionValue)}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            </ListItemText>
-          </ListItem>
+          <>
+            <ListItem button className="list-item">
+              <ListItemIcon>
+                {index % 2 === 0 ? (
+                  <InboxIcon style={{ fontSize: 30 }} />
+                ) : (
+                  <MailIcon style={{ fontSize: 30 }} />
+                )}
+              </ListItemIcon>
+              <ListItemText>
+                <li key={item.title} className="list-li">
+                  <Link
+                    style={{ color: `rgba(255, 255, 255, 0.8)`, fontSize: 20 }}
+                    to={item.toWaypoint}
+                    spy={true}
+                    smooth={true}
+                    offset={item.offsetValue}
+                    duration={500}
+                    onClick={() => handleList(item.setSectionValue)}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              </ListItemText>
+            </ListItem>
+            <Divider />
+          </>
         ))}
-        <ArrowBackIosNewRoundedIcon
-          className="arrow-button"
-          style={{ fontSize: 30 }}
-          onClick={() => setOpen(false)}
-        />
+        <div className="arrow-button">
+          <ArrowBackIosNewRoundedIcon
+            // className="arrow-button"
+            style={{ fontSize: 30 }}
+            onClick={() => setOpen(false)}
+          />
+        </div>
       </List>
     </Box>
   );

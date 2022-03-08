@@ -19,10 +19,17 @@ const Navbar = ({ section, setSection }) => {
 
   return (
     <div className="navbar">
-      <Link to="header" spy={true} smooth={true} offset={-100} duration={500}>
+      <Link
+        className="logo-container"
+        to="header"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+      >
         <img className="logo" src={logo2} alt="logo" />
       </Link>
-      {handleNavbar()}
+      <div>{handleNavbar()}</div>
       <Icons />
     </div>
   );

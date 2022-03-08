@@ -18,7 +18,16 @@ svg {
 }
 
 .arrow-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   transform: rotate(90deg);
   cursor: pointer;
   transition: ease-in-out 0.3s;
+}
+
+hr {
+  color: black;
+  width: 90%;
+  height: 4px;
 }
