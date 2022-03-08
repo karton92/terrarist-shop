@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/terrarist-shop/static/css/main.94538321.css",
+    "main.css": "/terrarist-shop/static/css/main.46b0f979.css",
     "main.js": "/terrarist-shop/static/js/main.73b6d9d5.js",
     "static/media/slide1.jpg": "/terrarist-shop/static/media/slide1.0ec4fe595f5ed4b44d2f.jpg",
     "static/media/banner.jpg": "/terrarist-shop/static/media/banner.51188861e4673772ba08.jpg",
@@ -13,11 +13,11 @@
     "static/media/loki.jpg": "/terrarist-shop/static/media/loki.0319942793e02bb3996a.jpg",
     "static/media/about.jpg": "/terrarist-shop/static/media/about.046d07396bf4dca35fad.jpg",
     "index.html": "/terrarist-shop/index.html",
-    "main.94538321.css.map": "/terrarist-shop/static/css/main.94538321.css.map",
+    "main.46b0f979.css.map": "/terrarist-shop/static/css/main.46b0f979.css.map",
     "main.73b6d9d5.js.map": "/terrarist-shop/static/js/main.73b6d9d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.94538321.css",
+    "static/css/main.46b0f979.css",
     "static/js/main.73b6d9d5.js"
   ]
 }
