@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/terrarist-shop/static/css/main.1e9631fd.css",
-    "main.js": "/terrarist-shop/static/js/main.ee9ba548.js",
+    "main.css": "/terrarist-shop/static/css/main.ed35585f.css",
+    "main.js": "/terrarist-shop/static/js/main.73b6d9d5.js",
     "static/media/slide1.jpg": "/terrarist-shop/static/media/slide1.0ec4fe595f5ed4b44d2f.jpg",
+    "static/media/banner.jpg": "/terrarist-shop/static/media/banner.51188861e4673772ba08.jpg",
+    "static/media/gecko.jpg": "/terrarist-shop/static/media/gecko.51d7d190d8e8a1e55b8b.jpg",
+    "static/media/placzki.jpg": "/terrarist-shop/static/media/placzki.f291953e2d8f5dfadf46.jpg",
+    "static/media/spider.jpg": "/terrarist-shop/static/media/spider.fab559424aae67f7e0ea.jpg",
     "static/media/logo2.png": "/terrarist-shop/static/media/logo2.4faff62bbad01e71cbf2.png",
+    "static/media/mia.jpg": "/terrarist-shop/static/media/mia.1d9138005d024bf9bfbc.jpg",
+    "static/media/freya.jpg": "/terrarist-shop/static/media/freya.3be9f8986a9e29060ad3.jpg",
+    "static/media/loki.jpg": "/terrarist-shop/static/media/loki.0319942793e02bb3996a.jpg",
+    "static/media/about.jpg": "/terrarist-shop/static/media/about.046d07396bf4dca35fad.jpg",
     "index.html": "/terrarist-shop/index.html",
-    "main.1e9631fd.css.map": "/terrarist-shop/static/css/main.1e9631fd.css.map",
-    "main.ee9ba548.js.map": "/terrarist-shop/static/js/main.ee9ba548.js.map"
+    "main.ed35585f.css.map": "/terrarist-shop/static/css/main.ed35585f.css.map",
+    "main.73b6d9d5.js.map": "/terrarist-shop/static/js/main.73b6d9d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e9631fd.css",
-    "static/js/main.ee9ba548.js"
+    "static/css/main.ed35585f.css",
+    "static/js/main.73b6d9d5.js"
   ]
 }
