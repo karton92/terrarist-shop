@@ -13,11 +13,16 @@ function ItemCard({ name, imgSrc, species, morph, date, sex }) {
       </div>
       <div className="geckos-info">
         <h2>
-          {name} {sex === "female" ? <FemaleIcon /> : <MaleIcon />}
+          {name}{" "}
+          {sex === "female" ? (
+            <FemaleIcon style={{ backgroundColor: "rgb(235, 113, 164)" }} />
+          ) : (
+            <MaleIcon style={{ backgroundColor: "rgb(113, 145, 235)" }} />
+          )}
         </h2>
         <p className="morph">{morph}</p>
         <p className="species">{species}</p>
-        <p>Od kiedy: {date}</p>
+        <p>W hodowli od: {date}</p>
       </div>
       {/* <button>Zobacz</button> */}
     </div>

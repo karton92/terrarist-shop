@@ -477,4 +477,42 @@ const Items = [
   },
 ];
 
-export { MenuItems, Items, Geckos };
+const GeckoInfo = [
+  {
+    id: 0,
+    title: "Gekon orzęsiony – opis gatunku",
+    content:
+      "Gekon orzęsiony (Correlophus ciliatus) to gatunek jaszczurki z rodzaju Correlophus z rodziny Diplodactylidae. Gatunek gekona orzęsionego został opisany w 1866 roku przez Guichenota. Gekony orzęsione osiągają długość ciała do 25 cm, a bez ogona ok. 11 cm. Masa ciała dorosłego gekona orzęsionego sięga 65 gramów. Gekony orzęsione średniej wielkości mierzą do 22 cm i ważą do 45 gramów. Z kolei młode jaszczurki po wykluciu mierzą do 7 cm i ważą zaledwie 1,5 grama.",
+  },
+  {
+    id: 1,
+    title: "Jak wygląda gekon orzęsiony?",
+    content:
+      "To właśnie ze względu na swój wygląd gekon orzęsiony jest jednym z najpopularniejszych gatunków wśród gekonów w hodowlach. W USA ten gatunek jaszczurki jest równie popularny, jak gekon lamparci. Ciało gekona orzęsionego pokryte jest okrągłymi łuskami. Wyrostki skórne znajdują się nad oczami i biegną wzdłuż ciała gekona aż do nasady ogona. Ogon gekona orzęsionego jest chwytny, spłaszczony na końcu, przypomina wiosło, z blaszkami, które odpowiadają za przyleganie do powierzchni. Co ciekawe, większość gekonów orzęsionych, żyjących w naturze nie posiada ogona, ponieważ temu gatunkowi ogon nie odrasta. Głowa gekona orzęsionego jest spłaszczona o trójkątnym kształcie klina. Oczy pozbawione są powiek, a do ich czyszczenia gekon używa swojego długiego języka. Spodnia część palców pokryta jest lamelami, zbudowanymi z milionów wyrostków skórnych, które odpowiadają za przyleganie do powierzchni.",
+  },
+  {
+    id: 2,
+    title: "Tryb życia gekona orzęsionego",
+    content: `Gekon orzęsiony zamieszkuje ciepłe i wilgotne lasy deszczowe Nowej Kaledonii, położonej około 1400 km od wybrzeży Australii. Średnia wilgotność na wyspie wynosi ok. 70%, z kolei średnia temperatura to 25,5 °C. Nie są to więc temperatury tropikalne i w ten sposób o gekonie orzęsionym nie należy myśleć w hodowli. Stosowanie wyższych temperatury w terrarium dla gekona orzęsionego może skończyć się jego przegrzaniem, a w ekstremalnych sytuacjach nawet śmiercią. Gekon orzęsiony to jaszczurka, która prowadzi nocny tryb życia. W ciągu dnia gekon orzęsiony przebywa w kryjówkach, natomiast w nocy poluje. Do polowań gekon orzęsiony wykorzystuje chwytny ogon oraz palce i końcówkę ogona pokrytą lamelami z wyrostkami skórnymi. Gekon ten jest doskonałym skoczkiem, do czego wykorzystuje fałdy skórne przebiegające wzdłuż ciała, które działają, jak spadochron.`,
+  },
+  {
+    id: 3,
+    title: "Co je gekon orzęsiony?",
+    content:
+      "Czym karmić gekona orzęsionego? Przede wszystkim należy wiedzieć, że ten gatunek gekona jest wszystkożerny. Można karmić go zarówno bezkręgowcami, jak i owocami oraz nektarem kwiatowym. Kluczowe w naturalnej diecie gekona orzęsionego są owady, można podawać mu karaczany argentyńskie, świerszcze i szarańczę. Pokarm powinien być suplementowany wapniem oraz mieszankami witamin dla jaszczurek. Co ciekawe gekon orzęsiony jest jedną z niewielu jaszczurek, której nie musimy karmić żywymi owadami. Pozwala na to dieta Allena Repashy`ego, która jest w pełni zbilansowanym, kompletnym pokarmem dla gekonów. Oczywiście dietę tą można wzbogacać o owady i owoce oraz nektary, by urozmaicić gekonowi orzęsionemu menu. Młode gekony orzęsione należy karmić każdego dnia. W przypadku dorosłych gekonów karmienie powinno odbywać się co dwa dni. W przypadku diety łączonej (Repashy + owady) bezkręgowce należy dodatkowo suplementować raz w tygodniu, posypując je wapniem oraz mieszanką witamin i minerałów dla gekonów (bez witaminy D3).",
+  },
+  {
+    id: 4,
+    title: "Hodowla gekona orzęsionego",
+    content:
+      "Gekony osiągają dojrzałość płciową między 8 a 12 miesiącem życia. Nie oznacza to jednak, że należy je od razu rozmnażać. Ostrożni hodowcy zalecają, by samica skończyła 2 lata i ważyła ok. 65 gramów. Samce powinny mieć około 9 miesięcy. Cykl rozrodczy samicy gekona może trwać cały rok, wskazane jest jednak jego przerwanie na trzy miesiące w okresie zimowym. Samica składa dwa jaja co 25-40 dni. Samica powinna mieć możliwość złożyć jaja w pojemniku do inkubacji wypełnionym wermikulitem, który należy zraszać w proporcji 100 g podłoża + 50 g wody. Pojemnik należy otwierać raz w tygodniu, by sprawdzić wilgotność i dostarczyć świeżego powietrza. Pojemnik należy inkubować w temperaturze około 24,5-25,5°C – czas inkubacji w takiej temperaturze to około 60 dni. Dopuszczalna temperatura inkubacji waha się od 20 do 29°C. Przy temperaturze ok. 20°C czas inkubacji może wydłużyć się do 140 dni.",
+  },
+  {
+    id: 5,
+    title: "Terrarium dla gekona orzęsionego",
+    content:
+      "Terrarium dla gekona orzęsionego może być szklane lub drewniane. To drugie należy odpowiednio zabezpieczyć przed wilgocią Podłoże terrarium powinno być chłonne i trzymać wilgoć – dobrze sprawdzi się np. substrat kokosowy, chociaż dostępne są inne podłoża np. kora, torf czy forest floor. Terrarium spryskujemy wodą raz dziennie wieczorem. Zostawiamy w nim również płytką miseczkę z wodą. Temperatura w terrarium powinna oscylować między 22, a 25°C, zatem może obyć się bez dodatkowego ogrzewania. Temperatura podwyższona miejscowo do 27°C może mieć pozytywny wpływ, podczas rozmnażania gekonów. Zimą (przez dwa-trzy miesiące) temperaturę warto obniżyć do 18-21°C, a samca oddzielić od samic. Jest to również okres odpoczynku od rozmnażania. Oświetlenie w terrarium może być wykorzystywane, by wytworzyć cykl 12-14 godzinnych dni świetlnych, które gekony będą przesypiać. Takie rozwiązanie będzie też wpływało korzystanie na wzrost roślin w terrarium. By obserwować gekona orzęsionego nocą można zamontować klasyczną czerwoną lampę terrarystyczną. Terrarium można udekorować konarami, lianami oraz rurkami kokosowymi. Jeżeli terrarium będzie dodatkowo oświetlane pod żywe rośliny (np. Dracaena deremensis, Ficus benjamina), to gekon orzęsiony powinien mieć zapewnione ciemne schowki, w których będzie mógł przespać porę dzienną.",
+  },
+];
+
+export { MenuItems, Items, Geckos, GeckoInfo };
