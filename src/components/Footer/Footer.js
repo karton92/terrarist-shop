@@ -4,7 +4,7 @@ import "./Footer.scss";
 import Contact from "./Contact";
 import Info from "./Info";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer" id="footer">
       <div className="footer-container-shadow">
@@ -20,6 +20,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

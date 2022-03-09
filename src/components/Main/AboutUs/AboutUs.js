@@ -1,13 +1,12 @@
 import React from "react";
 import "./AboutUs.scss";
-import about from "../../../images/about.jpg";
 
-function AboutUs() {
+const AboutUs = () => {
   return (
     <div className="about">
       <h2>Jak to wszystko się zaczęło?</h2>
       <div className="about-container">
-        <div className="about-img-box"></div>
+        <div className="about-img-box" />
         <div className="about-content">
           <p className="blockquote">
             "Boimy się tego, czego nie znamy. Jeśli coś jest skryte pod zasłoną
@@ -49,6 +48,6 @@ function AboutUs() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutUs;

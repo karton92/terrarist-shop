@@ -5,7 +5,7 @@ import "./ItemCardGeckos.scss";
 import FemaleIcon from "@mui/icons-material/Female";
 import MaleIcon from "@mui/icons-material/Male";
 
-function ItemCard({ name, imgSrc, species, morph, date, sex }) {
+const ItemCard = ({ name, imgSrc, species, morph, date, sex }) => {
   return (
     <div className="geckos-item-card">
       <div className="geckos-item-img-box">
@@ -27,6 +27,6 @@ function ItemCard({ name, imgSrc, species, morph, date, sex }) {
       {/* <button>Zobacz</button> */}
     </div>
   );
-}
+};
 
 export default ItemCard;

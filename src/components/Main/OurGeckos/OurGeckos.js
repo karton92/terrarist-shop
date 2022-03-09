@@ -1,14 +1,14 @@
 import React from "react";
 import ItemCard from "./ItemCardGeckos";
 import "./OurGeckos.scss";
-import { Geckos } from "../../utils/Data";
+import { geckos } from "../../utils/Data";
 
-function OurGeckos() {
+const OurGeckos = () => {
   return (
     <div className="geckos">
       <h2>Pod naszą opieką są:</h2>
       <div className="geckos-container">
-        {Geckos.map((item) => (
+        {geckos.map((item) => (
           <ItemCard
             name={item.name}
             species={item.species}
@@ -21,6 +21,6 @@ function OurGeckos() {
       </div>
     </div>
   );
-}
+};
 
 export default OurGeckos;

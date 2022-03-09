@@ -2,7 +2,7 @@ import React from "react";
 import { BarChart, Facebook, Instagram } from "@mui/icons-material";
 import "./Icons.scss";
 
-function Icons() {
+const Icons = () => {
   return (
     <div className="toggle-menu">
       <a
@@ -24,6 +24,6 @@ function Icons() {
       </a>
     </div>
   );
-}
+};
 
 export default Icons;

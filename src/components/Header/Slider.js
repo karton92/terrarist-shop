@@ -1,30 +1,9 @@
 import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
-import slide1 from "../../images/slide1.jpg";
 import "./Slider.scss";
+import { sliderData } from "../utils/Data";
 
-const sliderData = [
-  {
-    id: 0,
-    img: `url("https://i.imgur.com/G8FV3Tz.jpg")`,
-    title: "First slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
-  },
-  {
-    id: 1,
-    img: `url("https://images5.alphacoders.com/449/thumb-1920-449483.jpg")`,
-    title: "Second slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
-  },
-  {
-    id: 2,
-    img: `url("https://wallpaperaccess.com/full/31189.jpg")`,
-    title: "Third slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
-  },
-];
-
-function Slider() {
+const Slider = () => {
   const carouselRef = useRef(null);
   const onNextStart = (currentItem, nextItem) => {
     if (currentItem.index === nextItem.index) {
@@ -67,6 +46,6 @@ function Slider() {
       </Carousel>
     </div>
   );
-}
+};
 
 export default Slider;

@@ -5,7 +5,28 @@ import Freya from "../../images/breeding-geckos/freya.jpg";
 import Loki from "../../images/breeding-geckos/loki.jpg";
 import placzki from "../../images/breeding-geckos/placzki.jpg";
 
-const Geckos = [
+const sliderData = [
+  {
+    id: 0,
+    img: `url("https://i.imgur.com/G8FV3Tz.jpg")`,
+    title: "Wiosenny konkurs!",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
+  },
+  {
+    id: 1,
+    img: `url("https://images5.alphacoders.com/449/thumb-1920-449483.jpg")`,
+    title: "Second slide",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
+  },
+  {
+    id: 2,
+    img: `url("https://wallpaperaccess.com/full/31189.jpg")`,
+    title: "Third slide",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
+  },
+];
+
+const geckos = [
   {
     name: "Mia",
     imgSrc: Mia,
@@ -40,7 +61,7 @@ const Geckos = [
   },
 ];
 
-const MenuItems = [
+const storeMenu = [
   {
     id: 1,
     itemId: "gecko01",
@@ -90,7 +111,7 @@ const MenuItems = [
   },
 ];
 
-const Items = [
+const storeItems = [
   {
     name: "geckos",
     content: [
@@ -247,7 +268,7 @@ const Items = [
         id: 1,
         name: "Skakun królewski",
         imgSrc:
-          "http://www.miejscowa.pl/wp-content/uploads/2016/09/pajonk-1-768x531.jpg",
+          "https://www.thespidershop.co.uk/wp-content/uploads/2022/02/p_regius_3.jpg",
         price: 70,
         description: "Treść opisu w przygotowaniu",
       },
@@ -477,7 +498,7 @@ const Items = [
   },
 ];
 
-const GeckoInfo = [
+const geckoInfo = [
   {
     id: 0,
     title: "Gekon orzęsiony – opis gatunku",
@@ -515,4 +536,4 @@ const GeckoInfo = [
   },
 ];
 
-export { MenuItems, Items, Geckos, GeckoInfo };
+export { sliderData, storeMenu, storeItems, geckos, geckoInfo };

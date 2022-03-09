@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import "./Contact.scss";
-import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 

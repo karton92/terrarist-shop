@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { GeckoInfo } from "../../utils/Data";
+import { geckoInfo } from "../../utils/Data";
 
 const Informations = () => {
   return (
@@ -22,7 +22,7 @@ const Informations = () => {
         </p>
       </figure>
       <div className="info-accordion">
-        {GeckoInfo.map((item) => (
+        {geckoInfo.map((item) => (
           <Accordion>
             <AccordionSummary
               key={item.id}

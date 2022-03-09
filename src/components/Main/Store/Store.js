@@ -1,53 +1,35 @@
 import React, { useState } from "react";
 import "./Store.scss";
-import { MenuItems, Items } from "../../utils/Data";
-import BannerName from "./BannerName";
-import SubMenuContainer from "./SubMenuContainer";
-import MenuCard from "./MenuCard";
-import ItemCard from "./ItemCard";
+import Banner from "./Banner/Banner";
+import SubMenuContainer from "./StoreContent/SubMenuContainer";
+import Cart from "./Cart/Cart";
+import MenuRowContainer from "./StoreContent/MenuRowContainer";
+import ItemsContainer from "./StoreContent/ItemsContainer";
 
-function Store() {
+const Store = () => {
   const [view, setView] = useState(false);
   const [active, setActive] = useState(1);
   return (
     <div className="store">
       <div className="main-container">
-        <BannerName discount={"100"} more={"#"} />
-        <div className="menu-container">
-          <div className="menu-cards">
-            <SubMenuContainer view={view} setView={setView} />
-          </div>
-          <div className={`row-container ${view ? "view-row-handler" : ""}`}>
-            {MenuItems &&
-              MenuItems.map((item) => (
-                <MenuCard
-                  key={item.id}
-                  imgSrc={item.imgSrc}
-                  name={item.name}
-                  id={item.id}
-                  isActive={item.id === active ? true : false}
-                  setActive={setActive}
-                  view={view}
-                />
-              ))}
-          </div>
-          <div className="menu-items-container">
-            {Items[active - 1].content.map((item) => (
-              <ItemCard
-                name={item.name}
-                imgSrc={item.imgSrc}
-                price={item.price}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </div>
+        {/* BANNER PANEL */}
+        <Banner name={"Wiosenne zwierzo-branie!"} discount={"100"} more={"#"} />
+
+        {/* STORE MENU CATEGORY & STORE ITEMS PANEL */}
+        <SubMenuContainer view={view} setView={setView} />
+        <MenuRowContainer
+          view={view}
+          setView={setView}
+          active={active}
+          setActive={setActive}
+        />
+        <ItemsContainer active={active} />
       </div>
-      <div className="right-container">
-        <h2>Do zapłaty:</h2>
-      </div>
+
+      {/* RIGHT CART PANEL */}
+      <Cart />
     </div>
   );
-}
+};
 
 export default Store;
