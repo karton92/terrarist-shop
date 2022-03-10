@@ -6,7 +6,7 @@ import Cart from "./Cart/Cart";
 import MenuRowContainer from "./StoreContent/MenuRowContainer";
 import ItemsContainer from "./StoreContent/ItemsContainer";
 
-const Store = () => {
+const Store = ({ isActive }) => {
   const [view, setView] = useState(false);
   const [active, setActive] = useState(1);
   return (
@@ -27,7 +27,7 @@ const Store = () => {
       </div>
 
       {/* RIGHT CART PANEL */}
-      <Cart />
+      <Cart isActive={isActive} />
     </div>
   );
 };

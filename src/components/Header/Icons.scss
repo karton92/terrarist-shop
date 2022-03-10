@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .toggle-icon {
-    display: none;
+  .cart-icon {
     font-size: 30px;
+    cursor: pointer;
     @media only screen and (max-width: 768px) {
       display: inline;
     }

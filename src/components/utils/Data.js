@@ -10,7 +10,7 @@ const sliderData = [
     id: 0,
     img: `url("https://i.imgur.com/G8FV3Tz.jpg")`,
     title: "Wiosenny konkurs!",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
+    text: "Polub nasz fanpage na Facebook'u i zgarnij mega nagrody! Szczegóły konkursu podane są w wyróżnionym poście!",
   },
   {
     id: 1,

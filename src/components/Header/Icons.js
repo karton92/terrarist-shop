@@ -1,8 +1,10 @@
 import React from "react";
 import { BarChart, Facebook, Instagram } from "@mui/icons-material";
 import "./Icons.scss";
+import { Link } from "react-scroll";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const Icons = () => {
+const Icons = ({ isActive, setActive }) => {
   return (
     <div className="toggle-menu">
       <a
@@ -19,9 +21,19 @@ const Icons = () => {
       >
         <Facebook />
       </a>
-      <a href="#">
-        <BarChart className="toggle-icon" />
-      </a>
+      <Link
+        to={"main"}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        // onClick={() => setSection("shop")}
+      >
+        <ShoppingCartIcon
+          className="cart-icon"
+          onClick={() => setActive(!isActive)}
+        />
+      </Link>
     </div>
   );
 };
