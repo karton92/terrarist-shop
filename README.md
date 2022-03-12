@@ -11,8 +11,10 @@ Enjoy it!<br>
 1. React<br>
 2. Javascript<br>
 3. Redux Toolkit<br>
-4. Firebase - in future with CMS Panel<br>
-5. SCSS<br>
-6. RWD<br>
-7. Hooks<br>
-8. Optimization Care<br>
+4. SCSS<br>
+5. RWD<br>
+6. Hooks<br>
+7. Optimization Care<br>
+
+In future:
+8. Firebase & CMS Panel<br>
