@@ -51,11 +51,24 @@ const Contact = () => {
     <div className="footer-contact">
       <h2>Odezwij się do Nas!</h2>
       <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="user_name" placeholder="Imię" />
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Imię"
+          required
+          aria-required="true"
+          minLength="3"
+        />
         <br />
         <input type="email" name="user_email" placeholder="Email" />
         <br />
-        <textarea name="message" placeholder="Wpisz treść wiadomości" />
+        <textarea
+          name="message"
+          placeholder="Wpisz treść wiadomości"
+          required
+          aria-required="true"
+          minLength="3"
+        />
         <br />
         <div className="captcha">
           <input className="submit-input" type="submit" value="Wyślij" />

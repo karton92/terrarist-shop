@@ -10,19 +10,28 @@ const sliderData = [
     id: 0,
     img: `url("https://i.imgur.com/G8FV3Tz.jpg")`,
     title: "Wiosenny konkurs!",
-    text: "Polub nasz fanpage na Facebook'u i zgarnij mega nagrody! Szczegóły konkursu podane są w wyróżnionym poście!",
+    text: "Polub nasz fanpage na Facebook'u i zgarnij super nagrody! Szczegóły konkursu podane są w wyróżnionym poście!",
+    isButton: true,
+    isButtonLink: false,
+    buttonDirect: "https://www.facebook.com/ValhallaGeckos",
   },
   {
     id: 1,
     img: `url("https://images5.alphacoders.com/449/thumb-1920-449483.jpg")`,
-    title: "Second slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
+    title: "Promocje - czas start!",
+    text: "Odwiedź nasz sklep i zobacz naszą oferte - nowe garunki już są!",
+    isButton: true,
+    isButtonLink: true,
+    buttonDirect: "main",
   },
   {
     id: 2,
-    img: `url("https://wallpaperaccess.com/full/31189.jpg")`,
-    title: "Third slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
+    img: `url("https://jennicruzcom.files.wordpress.com/2020/05/1741960.jpg")`,
+    title: "Bądź razem z Nami!",
+    text: "Odwiedź nasz Instagram, zacznij go obserwować i bądź na czasie z naszą ofertą!",
+    isButton: true,
+    isButtonLink: false,
+    buttonDirect: "https://www.instagram.com/valhallageckos/",
   },
 ];
 
@@ -155,7 +164,7 @@ const storeItems = [
         name: "Gekon olbrzymi",
         imgSrc:
           "https://thumbs.dreamstime.com/b/new-caledonian-giant-gecko-rhacodactylus-leachianus-largest-species-world-endemic-to-59865325.jpg",
-        price: 750,
+        price: 650,
         description:
           "Jest to największy obecnie znany gekon. Dorosły osobnik Gekona olbrzymiego (Rhacodactylus leachianus) osiąga rozmiar do 35 centymetrów oraz może ważyć nawet 500 gramów. Jego naturalne środowisko występowania to wyłącznie lasy deszczowe Nowej Kaledonii. Głównie zamieszkuje owocujące drzewa, które dostarczają mu niezbędny pokarm.",
       },
@@ -173,7 +182,7 @@ const storeItems = [
         name: "Gekon Williamsa",
         imgSrc:
           "https://www.wykop.pl/cdn/c3201142/comment_Bso7lLrTWSfRo9iJb9Pp0jcrwyKve3I9,w1200h627f.jpg",
-        price: 1250,
+        price: 550,
         description:
           "Jest to gatunek endemiczny występujący jedynie w tropikalnym lesie Tanzanii. Gekony te osiągają od 6 do 10 cm długości ciała. Cechą charakterystyczną tego gatunku jest piękne, niebiesko-szafirowe ubarwienie samców. Samice ubarwione są w odcieniach kolorów zielonego, oliwkowego lub brązowego. Są to gekony o aktywności dziennej, które w naturze większość czasu spędzają na drzewach.",
       },

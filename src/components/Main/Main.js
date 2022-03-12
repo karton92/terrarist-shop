@@ -5,9 +5,9 @@ import OurGeckos from "./OurGeckos/OurGeckos";
 import Informations from "./Informations/Informations";
 import AboutUs from "./AboutUs/AboutUs";
 
-function Main({ section, isActive }) {
+function Main({ section }) {
   const handleMainSection = () => {
-    if (section === "shop") return <Store isActive={isActive} />;
+    if (section === "shop") return <Store />;
     else if (section === "geckos") return <OurGeckos />;
     else if (section === "informations") return <Informations />;
     else if (section === "about") return <AboutUs />;

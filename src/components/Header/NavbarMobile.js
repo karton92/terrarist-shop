@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
+import SwipeableDrawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
@@ -118,9 +118,14 @@ const NavbarMobile = ({ section, setSection }) => {
         <Button onClick={() => setOpen(true)}>
           <MenuOpenIcon style={{ fontSize: 50 }} className="mobile-button" />
         </Button>
-        <Drawer anchor={anchor} open={open} onClose={() => setOpen(false)}>
+        <SwipeableDrawer
+          anchor={anchor}
+          open={open}
+          onClose={() => setOpen(false)}
+          onOpen={() => setOpen(true)}
+        >
           {list(anchor)}
-        </Drawer>
+        </SwipeableDrawer>
       </React.Fragment>
     </div>
   );

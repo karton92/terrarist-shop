@@ -1,12 +1,16 @@
 import React from "react";
-import { BarChart, Facebook, Instagram } from "@mui/icons-material";
+import { Facebook, Instagram } from "@mui/icons-material";
 import "./Icons.scss";
 import { Link } from "react-scroll";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useSelector, useDispatch } from "react-redux";
+import { handleActive, cartItemsNumber } from "../../redux/features/cartSlice";
 
-const Icons = ({ isActive, setActive }) => {
+const Icons = () => {
+  const dispatch = useDispatch();
+  const cartNumber = useSelector(cartItemsNumber);
   return (
-    <div className="toggle-menu">
+    <div className="icons-menu">
       <a
         rel="noreferrer"
         target="_blank"
@@ -21,19 +25,15 @@ const Icons = ({ isActive, setActive }) => {
       >
         <Facebook />
       </a>
-      <Link
-        to={"main"}
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        // onClick={() => setSection("shop")}
-      >
-        <ShoppingCartIcon
-          className="cart-icon"
-          onClick={() => setActive(!isActive)}
-        />
-      </Link>
+      <div className="cart-icon">
+        <Link to={"main"} spy={true} smooth={true} offset={-70} duration={500}>
+          <ShoppingCartIcon
+            className="cart-icon"
+            onClick={() => dispatch(handleActive())}
+          />
+        </Link>
+        <p>{cartNumber}</p>
+      </div>
     </div>
   );
 };

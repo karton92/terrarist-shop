@@ -1,4 +1,4 @@
-.toggle-menu {
+.icons-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,5 +19,25 @@
   }
   svg {
     font-size: 30px;
+  }
+}
+
+.cart-icon {
+  position: relative;
+  top: 0;
+  left: 0;
+  p {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    height: 19px;
+    width: 19px;
+    background-color: rgb(255, 145, 0);
+    border-radius: 100%;
+    color: white;
   }
 }

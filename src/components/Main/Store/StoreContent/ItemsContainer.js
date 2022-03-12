@@ -8,10 +8,12 @@ function ItemsContainer({ active }) {
     <div className="menu-items-container">
       {storeItems[active - 1].content.map((item) => (
         <ItemCard
+          key={item.name}
           name={item.name}
           imgSrc={item.imgSrc}
           price={item.price}
           description={item.description}
+          quantity={1}
         />
       ))}
     </div>

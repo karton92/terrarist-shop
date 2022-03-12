@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import CloseIcon from "@mui/icons-material/Close";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../../redux/features/cartSlice";
 
 function ModalContainer({
   open,
@@ -13,7 +15,10 @@ function ModalContainer({
   name,
   description,
   price,
+  quantity,
 }) {
+  const dispatch = useDispatch();
+
   return (
     <Modal
       aria-labelledby="transition-modal-title"
@@ -42,7 +47,13 @@ function ModalContainer({
                 <p>
                   Cena: <strong>{price} zł</strong>
                 </p>
-                <button>Do koszyka</button>
+                <button
+                  onClick={() =>
+                    dispatch(addToCart({ name, imgSrc, quantity, price }))
+                  }
+                >
+                  Do koszyka
+                </button>
               </div>
               <CloseIcon onClick={handleClose} />
             </div>

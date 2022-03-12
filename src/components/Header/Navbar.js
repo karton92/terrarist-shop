@@ -7,8 +7,8 @@ import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import Icons from "./Icons";
 
-const Navbar = ({ section, setSection, isActive, setActive }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 426px)" });
+const Navbar = ({ section, setSection }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
 
   const handleNavbar = () => {
     if (isMobile) {
@@ -30,7 +30,7 @@ const Navbar = ({ section, setSection, isActive, setActive }) => {
         <img className="logo" src={logo2} alt="logo" />
       </Link>
       <div>{handleNavbar()}</div>
-      <Icons isActive={isActive} setActive={setActive} />
+      <Icons />
     </div>
   );
 };

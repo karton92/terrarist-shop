@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import "./ItemCard.scss";
 import { AddRounded } from "@mui/icons-material";
 import ModalContainer from "./ModalContainer";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../../redux/features/cartSlice";
 
-const ItemCard = ({ name, imgSrc, price, description }) => {
+const ItemCard = ({ name, imgSrc, price, description, quantity }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const dispatch = useDispatch();
 
   return (
     <div className="item-card">
@@ -19,13 +23,16 @@ const ItemCard = ({ name, imgSrc, price, description }) => {
         <p>
           Cena: <strong>{price} zł</strong>
         </p>
-        <AddRounded />
+        <AddRounded
+          onClick={() => dispatch(addToCart({ name, imgSrc, quantity, price }))}
+        />
       </div>
       <ModalContainer
         open={open}
         handleClose={handleClose}
         imgSrc={imgSrc}
         name={name}
+        quantity={quantity}
         description={description}
         price={price}
       />
