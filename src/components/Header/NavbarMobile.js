@@ -8,10 +8,15 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
+//ICONS
+import HomeIcon from "@mui/icons-material/Home";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import PetsIcon from "@mui/icons-material/Pets";
+import InfoIcon from "@mui/icons-material/Info";
+import PersonIcon from "@mui/icons-material/Person";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 
 import "./NavbarMobile.scss";
 //TEST
@@ -26,36 +31,42 @@ const NavbarMobile = ({ section, setSection }) => {
       toWaypoint: "header",
       offsetValue: -100,
       setSectionValue: section,
+      menuIcon: <HomeIcon />,
     },
     {
       title: "Sklep",
       toWaypoint: "main",
       offsetValue: -70,
       setSectionValue: "shop",
+      menuIcon: <ShoppingCartIcon />,
     },
     {
       title: "Nasze gekony",
       toWaypoint: "main",
       offsetValue: -70,
       setSectionValue: "geckos",
+      menuIcon: <PetsIcon />,
     },
     {
       title: "Informacje",
       toWaypoint: "main",
       offsetValue: -70,
       setSectionValue: "informations",
+      menuIcon: <InfoIcon />,
     },
     {
       title: "O nas",
       toWaypoint: "main",
       offsetValue: -70,
       setSectionValue: "about",
+      menuIcon: <PersonIcon />,
     },
     {
       title: "Kontakt",
       toWaypoint: "footer",
       offsetValue: -70,
       setSectionValue: section,
+      menuIcon: <ContactMailIcon />,
     },
   ];
 
@@ -76,11 +87,8 @@ const NavbarMobile = ({ section, setSection }) => {
           <>
             <ListItem button className="list-item">
               <ListItemIcon>
-                {index % 2 === 0 ? (
-                  <InboxIcon style={{ fontSize: 30 }} />
-                ) : (
-                  <MailIcon style={{ fontSize: 30 }} />
-                )}
+                {item.menuIcon}
+                {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
               </ListItemIcon>
               <ListItemText>
                 <li key={item.title} className="list-li">
@@ -103,7 +111,6 @@ const NavbarMobile = ({ section, setSection }) => {
         ))}
         <div className="arrow-button">
           <ArrowBackIosNewRoundedIcon
-            // className="arrow-button"
             style={{ fontSize: 30 }}
             onClick={() => setOpen(false)}
           />

@@ -40,6 +40,7 @@
     }
 
     svg {
+      color: rgb(183, 193, 18);
       font-size: 40px;
     }
     .cart-header-text {
@@ -83,9 +84,9 @@
     align-items: center;
     margin: 20px 0;
     width: 100%;
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 321px) {
       h2 {
-        font-size: 24px;
+        font-size: 20px;
       }
     }
 
@@ -99,7 +100,7 @@
         font-size: 20px;
         font-weight: 500;
         margin: 0 10px;
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 321px) {
           font-size: 16px;
         }
       }
@@ -133,6 +134,7 @@
       justify-content: flex-end;
       margin-bottom: -20px;
       svg {
+        color: rgb(183, 193, 18);
         font-size: 35px;
       }
     }

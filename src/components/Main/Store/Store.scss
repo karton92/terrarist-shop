@@ -1,6 +1,6 @@
 .store {
   display: flex;
-  min-height: 150vh;
+  justify-content: space-around;
   height: auto;
   width: 100%;
   @media only screen and (max-width: 768px) {

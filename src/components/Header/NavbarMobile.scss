@@ -8,10 +8,6 @@
   background-color: red;
 }
 
-svg {
-  color: rgb(183, 193, 18);
-}
-
 .box-container {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -25,6 +21,10 @@ svg {
     rgb(170, 182, 126),
     rgb(63, 65, 59)
   );
+  svg {
+    color: rgb(183, 193, 18);
+    font-size: 30px;
+  }
 }
 
 .arrow-button {
@@ -40,4 +40,8 @@ hr {
   color: black;
   width: 90%;
   height: 4px;
+}
+
+.mobile-button {
+  color: rgb(183, 193, 18);
 }

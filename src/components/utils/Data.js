@@ -10,7 +10,7 @@ const sliderData = [
     id: 0,
     img: `url("https://i.imgur.com/G8FV3Tz.jpg")`,
     title: "Wiosenny konkurs!",
-    text: "Polub nasz fanpage na Facebook'u i zgarnij super nagrody! Szczegóły konkursu podane są w wyróżnionym poście!",
+    text: "Polub nasz fanpage na Facebook'u i zgarnij nagrody! Szczegóły konkursu podane w wyróżnionym poście!",
     isButton: true,
     isButtonLink: false,
     buttonDirect: "https://www.facebook.com/ValhallaGeckos",
