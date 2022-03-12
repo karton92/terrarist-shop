@@ -10,9 +10,9 @@ Enjoy it!<br>
 <h3>Stack:</h3>
 1. React<br>
 2. Javascript<br>
-3. Redux<br>
-4. Firebase<br>
+3. Redux Toolkit<br>
+4. Firebase - in future with CMS Panel<br>
 5. SCSS<br>
 6. RWD<br>
 7. Hooks<br>
-8. Optimization Care.<br>
+8. Optimization Care<br>
