@@ -16,17 +16,32 @@
   }
 }
 
+.logo-container {
+  @media only screen and (max-width: 500px) {
+    order: 2;
+  }
+}
+
 ul {
   display: flex;
+  align-items: center;
   @media only screen and (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
   }
   li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     text-transform: uppercase;
     margin: 10px;
     font-weight: 600;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      color: rgb(242, 255, 0);
+      transform: scale(1.1);
+    }
     @media only screen and (max-width: 768px) {
       margin: 5px;
     }
@@ -36,7 +51,14 @@ ul {
     font-size: 20px;
     text-decoration: none;
     color: rgb(183, 193, 18);
-    @media only screen and (max-width: 768px) {
+    transition: ease-in-out 0.3s;
+    &:hover {
+      color: rgb(151, 216, 0);
+    }
+    @media only screen and (max-width: 950px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 825px) {
       font-size: 14px;
     }
   }
@@ -46,51 +68,4 @@ ul {
   min-height: 45px;
   height: 45px;
   cursor: pointer;
-}
-
-.profile-container {
-  display: flex;
-  align-items: center;
-
-  .img-box {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-    border-radius: 100%;
-    background-color: rgb(183, 193, 18);
-    align-items: center;
-    justify-content: center;
-  }
-
-  .user-name {
-    font-size: 16px;
-    margin-left: 8px;
-    font-weight: 500;
-    display: none;
-    align-items: flex-end;
-  }
-}
-
-.toggle-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .toggle-icon {
-    display: none;
-    font-size: 30px;
-    @media only screen and (max-width: 768px) {
-      display: inline;
-    }
-  }
-  a {
-    color: rgb(183, 193, 18);
-    margin: 5px;
-    transition: ease 0.4s;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-  svg {
-    font-size: 30px;
-  }
 }

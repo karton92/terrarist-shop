@@ -3,23 +3,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   h1 {
     font-size: 50px;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 40px;
+      }
+    }
+    @media (max-width: 476px) {
+      font-size: 32px;
+    }
   }
   p {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0 70px;
-  }
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 40px;
-    }
-    p {
+    width: 50%;
+    @media (max-width: 476px) {
       text-align: center;
       margin: 10px;
-      font-size: 14px;
+      font-size: 20px;
+      width: 90%;
     }
+  }
+
+  .slider-button {
+    text-align: center;
+    width: 180px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: rgb(183, 193, 18);
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
   }
 }
 

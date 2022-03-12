@@ -1,16 +1,26 @@
 import React from "react";
 import "./Info.scss";
+// ICONS
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
 const Info = () => {
   return (
     <div className="footer-info-container">
       <h2>Znajdź nas!</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, expedita
-        iste exercitationem corporis tempora fugiat ullam perferendis eveniet
-        quos praesentium dolorem perspiciatis, aperiam a distinctio dolor veniam
-        quibusdam unde cumque?
-      </p>
+      <div className="footer-info-icon">
+        <LocationOnOutlinedIcon />
+        <p>Kraków, Polska</p>
+      </div>
+      <div className="footer-info-icon">
+        <PhoneAndroidOutlinedIcon />
+        <p>660 123 456</p>
+      </div>
+      <div className="footer-info-icon">
+        <EmailOutlinedIcon />
+        <p>valhallageckos@gmail.com</p>
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ function App() {
   const [section, setSection] = useState("shop");
   return (
     <div className="container">
-      <Header setSection={setSection} />
+      <Header section={section} setSection={setSection} />
       <Main section={section} />
       <Footer />
     </div>

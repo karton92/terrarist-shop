@@ -1,0 +1,86 @@
+.geckos-item-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 360px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  @media (max-width: 426px) {
+    margin: 10px 0;
+  }
+
+  h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .geckos-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .geckos-item-img-box {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  button {
+    text-align: center;
+    width: 80px;
+    height: 2em;
+    border: none;
+    margin: 10px 0;
+    text-transform: uppercase;
+    background-color: rgb(183, 193, 18);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    background-color: rgb(183, 193, 18);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 35px;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0 10px;
+  }
+
+  .morph {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .species {
+    font-style: italic;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}

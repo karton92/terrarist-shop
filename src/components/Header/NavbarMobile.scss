@@ -1,0 +1,47 @@
+.MuiPaper-root
+  .MuiPaper-elevation
+  .MuiPaper-elevation16
+  .MuiDrawer-paper
+  .MuiDrawer-paperAnchorTop
+  .css-1nvnyqx-MuiPaper-root-MuiDrawer-paper {
+  // background-color: transparent;
+  background-color: red;
+}
+
+.box-container {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.list-container {
+  color: white;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    180deg,
+    rgb(170, 182, 126),
+    rgb(63, 65, 59)
+  );
+  svg {
+    color: rgb(183, 193, 18);
+    font-size: 30px;
+  }
+}
+
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+hr {
+  color: black;
+  width: 90%;
+  height: 4px;
+}
+
+.mobile-button {
+  color: rgb(183, 193, 18);
+}

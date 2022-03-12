@@ -1,24 +1,35 @@
-import React from "react";
-import { SearchRounded, ShoppingCartRounded } from "@mui/icons-material";
+import React, { useState } from "react";
 import "./Store.scss";
+import Banner from "./Banner/Banner";
+import SubMenuContainer from "./StoreContent/SubMenuContainer";
+import Cart from "./Cart/Cart";
+import MenuRowContainer from "./StoreContent/MenuRowContainer";
+import ItemsContainer from "./StoreContent/ItemsContainer";
 
-function Store() {
+const Store = () => {
+  const [view, setView] = useState(false);
+  const [active, setActive] = useState(1);
   return (
     <div className="store">
-      <h2>Sklep internetowy</h2>
-      <div className="input-box">
-        <SearchRounded className="search-icon" />
-        <input type="text" placeholder="Search..." />
+      <div className="main-container">
+        {/* BANNER PANEL */}
+        <Banner name={"Wiosenne zwierzo-branie!"} discount={"100"} more={"#"} />
 
-        <div className="shopping-cart">
-          <ShoppingCartRounded className="cart" />
-          <div className="cart-content">
-            <p>2</p>
-          </div>
-        </div>
+        {/* STORE MENU CATEGORY & STORE ITEMS PANEL */}
+        <SubMenuContainer view={view} setView={setView} />
+        <MenuRowContainer
+          view={view}
+          setView={setView}
+          active={active}
+          setActive={setActive}
+        />
+        <ItemsContainer active={active} />
       </div>
+
+      {/* RIGHT CART PANEL */}
+      <Cart />
     </div>
   );
-}
+};
 
 export default Store;

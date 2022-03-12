@@ -1,61 +1,25 @@
 .store {
-  height: 100vh;
-}
-.input-box {
-  width: 60%;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
   display: flex;
-  align-items: center;
-  overflow-x: hidden;
-  padding: 8px 15px;
-  margin: 0 5px;
-
-  .search-icon {
-    color: rgb(155, 155, 155);
-    font-size: 20px;
-  }
-
-  input {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    border: none;
-    background: transparent;
-    color: rgb(155, 155, 155);
-    padding-left: 8px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-}
-
-.shopping-cart {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-
-  .cart-content {
-    width: 20px;
-    height: 20px;
-    min-width: 20px;
-    min-height: 20px;
-    border-radius: 100%;
-    margin: 0;
-    background-color: orange;
-    position: absolute;
-    top: -8px;
-    right: 0;
-    display: flex;
+  justify-content: space-around;
+  height: auto;
+  width: 100%;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white;
   }
+}
 
-  .cart {
-    font-size: 30px;
-    color: rgb(155, 155, 155);
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  @media only screen and (max-width: 1024px) {
+    width: 65%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
   }
 }

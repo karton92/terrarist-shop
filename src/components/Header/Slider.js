@@ -1,33 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
-import slide1 from "../../images/slide1.jpg";
 import "./Slider.scss";
+import { sliderData } from "../utils/Data";
+import { Link } from "react-scroll";
 
-const sliderData = [
-  {
-    id: 0,
-    img: `url("https://i.imgur.com/G8FV3Tz.jpg")`,
-    title: "First slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
-  },
-  {
-    id: 1,
-    img: `url("https://images5.alphacoders.com/449/thumb-1920-449483.jpg")`,
-    title: "Second slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
-  },
-  {
-    id: 2,
-    img: `url("https://wallpaperaccess.com/full/31189.jpg")`,
-    title: "Third slide",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus optio fugit delectus quam possimus et eum?",
-  },
-];
+const Slider = () => {
+  const carouselRef = useRef(null);
+  const onNextStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the last item, go to first item
+      carouselRef.current.goTo(0);
+    }
+  };
 
-function Slider() {
+  const onPrevStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the first item, go to last item
+      carouselRef.current.goTo(sliderData.length);
+    }
+  };
   return (
     <div className="slider-container">
-      <Carousel>
+      <Carousel
+        ref={carouselRef}
+        enableAutoPlay={true}
+        autoPlaySpeed={6000}
+        onPrevStart={onPrevStart}
+        onNextStart={onNextStart}
+        disableArrowsOnEnd={false}
+      >
         {sliderData.map((item) => (
           <div
             className="slider-item"
@@ -41,11 +42,35 @@ function Slider() {
           >
             <h1>{item.title}</h1>
             <p>{item.text}</p>
+            {item.isButton ? (
+              <button className="slider-button">
+                {item.isButtonLink ? (
+                  <Link
+                    to={item.buttonDirect}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    Zobacz
+                  </Link>
+                ) : (
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    className="slider-a"
+                    href={item.buttonDirect}
+                  >
+                    Zobacz
+                  </a>
+                )}
+              </button>
+            ) : null}
           </div>
         ))}
       </Carousel>
     </div>
   );
-}
+};
 
 export default Slider;
