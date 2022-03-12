@@ -124,6 +124,19 @@
       transform: scale(1.1);
     }
   }
+
+  .cart-close {
+    display: none;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: -20px;
+      svg {
+        font-size: 35px;
+      }
+    }
+  }
 }
 
 .cart-upper-box {

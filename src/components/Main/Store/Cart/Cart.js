@@ -1,6 +1,7 @@
 import React from "react";
 import "./Cart.scss";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import CloseIcon from "@mui/icons-material/Close";
 import CartItem from "./CartItem";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -8,6 +9,7 @@ import {
   isCartActive,
   resetCart,
   cartSummary,
+  handleActive,
 } from "../../../../redux/features/cartSlice";
 
 const Cart = () => {
@@ -18,6 +20,9 @@ const Cart = () => {
 
   return (
     <div className={`cart ${active ? "" : "hide"}`}>
+      <div className="cart-close">
+        <CloseIcon onClick={() => dispatch(handleActive())} />
+      </div>
       <div className="cart-header">
         <div className="cart-header-text">
           <ShoppingCartIcon />
