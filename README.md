@@ -11,10 +11,13 @@ Enjoy it!<br>
 1. React<br>
 2. Javascript<br>
 3. Redux Toolkit<br>
-4. SCSS<br>
-5. RWD<br>
-6. Hooks<br>
-7. Optimization Care<br>
+4. Material UI<br>
+5. EmailJS<br>
+6. React-Google-Recaptcha<br>
+7. SCSS<br>
+8. RWD<br>
+9. Hooks<br>
+10. Optimization Care<br>
 
 In future:
 8. Firebase & CMS Panel<br>
