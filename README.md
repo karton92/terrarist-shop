@@ -10,9 +10,14 @@ Enjoy it!<br>
 <h3>Stack:</h3>
 1. React<br>
 2. Javascript<br>
-3. Redux<br>
-4. Firebase<br>
-5. SCSS<br>
-6. RWD<br>
-7. Hooks<br>
-8. Optimization Care.<br>
+3. Redux Toolkit<br>
+4. Material UI<br>
+5. EmailJS<br>
+6. React-Google-Recaptcha<br>
+7. SCSS<br>
+8. RWD<br>
+9. Hooks<br>
+10. Optimization Care<br>
+<br>
+In future:<br>
+11. Firebase & CMS Panel<br>
