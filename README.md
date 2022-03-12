@@ -21,3 +21,7 @@ Enjoy it!<br>
 <br>
 In future:<br>
 11. Firebase & CMS Panel<br>
+<br><br><br>
+
+
+<img src="/example.jpg" alt="Site view">
