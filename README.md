@@ -18,6 +18,6 @@ Enjoy it!<br>
 8. RWD<br>
 9. Hooks<br>
 10. Optimization Care<br>
-
-In future:
-8. Firebase & CMS Panel<br>
+<br>
+In future:<br>
+11. Firebase & CMS Panel<br>
