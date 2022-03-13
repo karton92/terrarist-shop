@@ -1,3 +1,4 @@
+<img src="/example.jpg" alt="Site view" width="90%">
 <h2>Simple Terrarist-Shop App</h2>
 
 Welcome to my profile!<br>
@@ -19,9 +20,6 @@ Enjoy it!<br>
 9. Hooks<br>
 10. Optimization Care<br>
 <br>
-In future:<br>
+<h3>In future:</h3>
 11. Firebase & CMS Panel<br>
-<br><br><br>
 
-
-<img src="/example.jpg" alt="Site view">
