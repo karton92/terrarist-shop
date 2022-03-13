@@ -6,14 +6,12 @@ import { useMediaQuery } from 'react-responsive';
 import NavbarDesktop from './NavbarDesktop';
 import NavbarMobile from './NavbarMobile';
 import Icons from './Icons';
-import TestMobile from './TestMobile';
 
 const Navbar = ({ section, setSection }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
   const handleNavbar = () => {
     if (isMobile) {
-      // return <NavbarMobile section={section} setSection={setSection} />;
       return <NavbarMobile section={section} setSection={setSection} />;
     }
     return <NavbarDesktop section={section} setSection={setSection} />;

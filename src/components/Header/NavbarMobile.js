@@ -100,7 +100,6 @@ const NavbarMobile = ({ section, setSection }) => {
               <ListItemText>
                 <li key={item.title} className="list-li">
                   <Link
-                    style={{ color: `rgba(255, 255, 255, 0.8)`, fontSize: 20 }}
                     to={item.toWaypoint}
                     spy={true}
                     smooth={true}
@@ -113,6 +112,7 @@ const NavbarMobile = ({ section, setSection }) => {
               </ListItemText>
             </ListItem>
             <Divider />
+            <hr />
           </>
         ))}
       </List>
