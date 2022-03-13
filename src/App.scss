@@ -6,3 +6,8 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
+div[role='alert'] {
+  color: white;
+  margin-top: 1em;
+}

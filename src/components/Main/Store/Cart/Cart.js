@@ -1,69 +1,105 @@
-import React from "react";
-import "./Cart.scss";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import CloseIcon from "@mui/icons-material/Close";
-import CartItem from "./CartItem";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import './Cart.scss';
+
+// Redux Toolkit
+import { useSelector, useDispatch } from 'react-redux';
 import {
   cartValue,
   isCartActive,
   resetCart,
   cartSummary,
   handleActive,
-} from "../../../../redux/features/cartSlice";
+  alertCheck,
+  closeAlert
+} from '../../../../redux/features/cartSlice';
+
+// Material UI
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import Stack from '@mui/material/Stack';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CloseIcon from '@mui/icons-material/Close';
+import CartItem from './CartItem';
+import AlertNotification from '../../../utils/AlertNotification';
 
 const Cart = () => {
   const shoppingCart = useSelector(cartValue);
   const active = useSelector(isCartActive);
   const summary = useSelector(cartSummary);
+  const checkAlert = useSelector(alertCheck);
   const dispatch = useDispatch();
 
-  return (
-    <div className={`cart ${active ? "" : "hide"}`}>
-      <div className="cart-close">
-        <CloseIcon onClick={() => dispatch(handleActive())} />
-      </div>
-      <div className="cart-header">
-        <div className="cart-header-text">
-          <ShoppingCartIcon />
-          <h2>Mój koszyk:</h2>
-        </div>
+  //Alert START
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
 
-        <button onClick={() => dispatch(resetCart())}>Usuń koszyk</button>
-      </div>
-      <div className="cart-upper-box">
-        <div className="cart-items-container">
-          {shoppingCart ? (
-            shoppingCart.map((item) => (
-              <CartItem
-                key={item.name}
-                name={item.name}
-                imgSrc={item.imgSrc}
-                quantity={item.quantity}
-                price={item.price}
-              />
-            ))
-          ) : (
-            <h3>Koszyk jest pusty</h3>
-          )}
+    setOpen(false);
+    dispatch(closeAlert());
+  };
+  // Alert  STOP
+
+  return (
+    <>
+      <div className={`cart ${active ? '' : 'hide'}`}>
+        <div className="cart-close">
+          <CloseIcon onClick={() => dispatch(handleActive())} />
+        </div>
+        <div className="cart-header">
+          <div className="cart-header-text">
+            <ShoppingCartIcon />
+            <h2>Mój koszyk:</h2>
+          </div>
+
+          <button onClick={() => dispatch(resetCart())}>Usuń koszyk</button>
+        </div>
+        <div className="cart-upper-box">
+          <div className="cart-items-container">
+            {shoppingCart ? (
+              shoppingCart.map((item) => (
+                <CartItem
+                  key={item.name}
+                  name={item.name}
+                  imgSrc={item.imgSrc}
+                  quantity={item.quantity}
+                  price={item.price}
+                />
+              ))
+            ) : (
+              <h3>Koszyk jest pusty</h3>
+            )}
+          </div>
+        </div>
+        <div className="cart-summary">
+          <div className="cart-summary-text">
+            <h2>Łącznie:</h2>
+            <p>{summary} zł</p>
+          </div>
+          <div>
+            <button onClick={handleClick}>Zapłać</button>
+          </div>
         </div>
       </div>
-      <div className="cart-summary">
-        <div className="cart-summary-text">
-          <h2>Łącznie:</h2>
-          <p>{summary} zł</p>
-        </div>
-        <button
-          onClick={() =>
-            alert(
-              "Funkcjonalność niedostępna. Będzie realizowana w dalszym etapie."
-            )
-          }
-        >
-          Zapłać
-        </button>
-      </div>
-    </div>
+      <AlertNotification
+        severity={'warning'}
+        text={'Funkcjonalność niedostępna!'}
+        handleClose={handleClose}
+        open={open}
+      />
+      <AlertNotification
+        severity={'warning'}
+        text={
+          'W celu zakupienia tak dużej ilości zwierząt lub przedmiotów prosimy o kontakt indywidualny!'
+        }
+        handleClose={handleClose}
+        open={checkAlert}
+      />
+    </>
   );
 };
 

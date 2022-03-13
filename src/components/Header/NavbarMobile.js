@@ -18,7 +18,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PetsIcon from '@mui/icons-material/Pets';
 import InfoIcon from '@mui/icons-material/Info';
 import PersonIcon from '@mui/icons-material/Person';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
+import EmailIcon from '@mui/icons-material/Email';
 
 import './NavbarMobile.scss';
 
@@ -77,7 +77,7 @@ const NavbarMobile = ({ section, setSection }) => {
       toWaypoint: 'footer',
       offsetValue: -70,
       setSectionValue: section,
-      menuIcon: <ContactMailIcon />
+      menuIcon: <EmailIcon />
     }
   ];
 

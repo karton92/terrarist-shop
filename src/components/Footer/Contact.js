@@ -1,16 +1,8 @@
-import React, { useRef, useState } from "react";
-import "./Contact.scss";
-import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
-
-const Result = () => {
-  return (
-    <p>
-      Wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą najszybciej
-      jak się da.
-    </p>
-  );
-};
+import React, { useRef, useState } from 'react';
+import './Contact.scss';
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
+import AlertNotification from '../utils/AlertNotification';
 
 const Contact = () => {
   const [result, setResult] = useState(false);
@@ -18,7 +10,7 @@ const Contact = () => {
   const form = useRef();
 
   const handleCaptcha = (value) => {
-    console.log("Captcha value:", value);
+    console.log('Captcha value:', value);
     setCaptcha(value);
   };
 
@@ -26,12 +18,7 @@ const Contact = () => {
     e.preventDefault();
     if (captcha) {
       emailjs
-        .sendForm(
-          "service_9xcvuxw",
-          "template_7kdlim9",
-          form.current,
-          "8oZACKN5FIxP25BOJ"
-        )
+        .sendForm('service_9xcvuxw', 'template_7kdlim9', form.current, '8oZACKN5FIxP25BOJ')
         .then(
           (result) => {
             console.log(result.text);
@@ -42,10 +29,22 @@ const Contact = () => {
         );
       e.target.reset();
       setResult(true);
+      setOpen(true);
 
       setTimeout(() => setResult(false), 5000);
-    } else return alert("Nie zaznaczyłeś captcha!");
+    } else return alert('Nie zaznaczyłeś captcha!');
   };
+
+  //Alert START
+  const [open, setOpen] = useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+  // Alert  STOP
 
   return (
     <div className="footer-contact">
@@ -72,13 +71,19 @@ const Contact = () => {
         <br />
         <div className="captcha">
           <input className="submit-input" type="submit" value="Wyślij" />
-          <ReCAPTCHA
-            sitekey="6LeMjrMeAAAAADGl_cIPuxbseIf_jpN7o4s_bqmD"
-            onChange={handleCaptcha}
-          />
+          <ReCAPTCHA sitekey="6LeMjrMeAAAAADGl_cIPuxbseIf_jpN7o4s_bqmD" onChange={handleCaptcha} />
         </div>
       </form>
-      <div className="footer-result">{result ? <Result /> : null}</div>
+      <div className="footer-result">
+        {result ? (
+          <AlertNotification
+            severity={'success'}
+            text={'Wiadomość wysłana poprawnie!'}
+            handleClose={handleClose}
+            open={open}
+          />
+        ) : null}
+      </div>
     </div>
   );
 };
