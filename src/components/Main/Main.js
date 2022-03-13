@@ -1,21 +1,21 @@
-import React from "react";
-import "./Main.scss";
-import Store from "./Store/Store";
-import OurGeckos from "./OurGeckos/OurGeckos";
-import Informations from "./Informations/Informations";
-import AboutUs from "./AboutUs/AboutUs";
+import React from 'react';
+import './Main.scss';
+import Store from './Store/Store';
+import OurGeckos from './OurGeckos/OurGeckos';
+import Informations from './Informations/Informations';
+import AboutUs from './AboutUs/AboutUs';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-function Main({ section }) {
-  const handleMainSection = () => {
-    if (section === "shop") return <Store />;
-    else if (section === "geckos") return <OurGeckos />;
-    else if (section === "informations") return <Informations />;
-    else if (section === "about") return <AboutUs />;
-  };
-
+function Main() {
   return (
     <main className="main" id="main">
-      {handleMainSection()}
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/shop" />} />
+        <Route path="/shop" index element={<Store />} />
+        <Route path="/geckos" element={<OurGeckos />} />
+        <Route path="/informations" element={<Informations />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
     </main>
   );
 }

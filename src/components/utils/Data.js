@@ -5,6 +5,51 @@ import Freya from '../../images/breeding-geckos/freya.jpg';
 import Loki from '../../images/breeding-geckos/loki.jpg';
 import placzki from '../../images/breeding-geckos/placzki.jpg';
 
+// const navData = [
+//   {
+//     title: 'Home',
+//     toWaypoint: 'header',
+//     offsetValue: -100,
+//     setSectionValue: section,
+//     menuIcon: <HomeIcon />
+//   },
+//   {
+//     title: 'Sklep',
+//     toWaypoint: 'main',
+//     offsetValue: -70,
+//     setSectionValue: 'shop',
+//     menuIcon: <ShoppingCartIcon />
+//   },
+//   {
+//     title: 'Nasze gekony',
+//     toWaypoint: 'main',
+//     offsetValue: -70,
+//     setSectionValue: 'geckos',
+//     menuIcon: <PetsIcon />
+//   },
+//   {
+//     title: 'Informacje',
+//     toWaypoint: 'main',
+//     offsetValue: -70,
+//     setSectionValue: 'informations',
+//     menuIcon: <InfoIcon />
+//   },
+//   {
+//     title: 'O nas',
+//     toWaypoint: 'main',
+//     offsetValue: -70,
+//     setSectionValue: 'about',
+//     menuIcon: <PersonIcon />
+//   },
+//   {
+//     title: 'Kontakt',
+//     toWaypoint: 'footer',
+//     offsetValue: -70,
+//     setSectionValue: section,
+//     menuIcon: <EmailIcon />
+//   }
+// ];
+
 const sliderData = [
   {
     id: 0,

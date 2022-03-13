@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 //Material UI
 import Box from '@mui/material/Box';
@@ -42,42 +43,48 @@ const NavbarMobile = ({ section, setSection }) => {
       toWaypoint: 'header',
       offsetValue: -100,
       setSectionValue: section,
-      menuIcon: <HomeIcon />
+      menuIcon: <HomeIcon />,
+      path: '/'
     },
     {
       title: 'Sklep',
       toWaypoint: 'main',
       offsetValue: -70,
       setSectionValue: 'shop',
-      menuIcon: <ShoppingCartIcon />
+      menuIcon: <ShoppingCartIcon />,
+      path: '/shop'
     },
     {
       title: 'Nasze gekony',
       toWaypoint: 'main',
       offsetValue: -70,
       setSectionValue: 'geckos',
-      menuIcon: <PetsIcon />
+      menuIcon: <PetsIcon />,
+      path: '/geckos'
     },
     {
       title: 'Informacje',
       toWaypoint: 'main',
       offsetValue: -70,
       setSectionValue: 'informations',
-      menuIcon: <InfoIcon />
+      menuIcon: <InfoIcon />,
+      path: '/informations'
     },
     {
       title: 'O nas',
       toWaypoint: 'main',
       offsetValue: -70,
       setSectionValue: 'about',
-      menuIcon: <PersonIcon />
+      menuIcon: <PersonIcon />,
+      path: '/about'
     },
     {
       title: 'Kontakt',
       toWaypoint: 'footer',
       offsetValue: -70,
       setSectionValue: section,
-      menuIcon: <EmailIcon />
+      menuIcon: <EmailIcon />,
+      path: '/'
     }
   ];
 
@@ -99,15 +106,14 @@ const NavbarMobile = ({ section, setSection }) => {
               <ListItemIcon>{item.menuIcon}</ListItemIcon>
               <ListItemText>
                 <li key={item.title} className="list-li">
-                  <Link
+                  <ScrollLink
                     to={item.toWaypoint}
                     spy={true}
                     smooth={true}
                     offset={item.offsetValue}
-                    duration={500}
-                    onClick={() => handleList(item.setSectionValue)}>
-                    {item.title}
-                  </Link>
+                    duration={500}>
+                    <Link to={item.path}>{item.title}</Link>
+                  </ScrollLink>
                 </li>
               </ListItemText>
             </ListItem>

@@ -1,12 +1,12 @@
-import React from "react";
-import "./Header.scss";
-import Navbar from "./Navbar";
-import Slider from "./Slider";
+import React from 'react';
+import './Header.scss';
+import Navbar from './Navbar/Navbar';
+import Slider from './Slider';
 
-const Header = ({ section, setSection }) => {
+const Header = () => {
   return (
     <header className="header" id="header">
-      <Navbar section={section} setSection={setSection} />
+      <Navbar />
       <Slider />
     </header>
   );
