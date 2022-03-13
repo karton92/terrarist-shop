@@ -1,17 +1,19 @@
-import React from "react";
-import "./Navbar.scss";
-import logo2 from "../../images/logo2.png";
-import { Link } from "react-scroll";
-import { useMediaQuery } from "react-responsive";
-import NavbarDesktop from "./NavbarDesktop";
-import NavbarMobile from "./NavbarMobile";
-import Icons from "./Icons";
+import React from 'react';
+import './Navbar.scss';
+import logo2 from '../../images/logo2.png';
+import { Link } from 'react-scroll';
+import { useMediaQuery } from 'react-responsive';
+import NavbarDesktop from './NavbarDesktop';
+import NavbarMobile from './NavbarMobile';
+import Icons from './Icons';
+import TestMobile from './TestMobile';
 
 const Navbar = ({ section, setSection }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
   const handleNavbar = () => {
     if (isMobile) {
+      // return <NavbarMobile section={section} setSection={setSection} />;
       return <NavbarMobile section={section} setSection={setSection} />;
     }
     return <NavbarDesktop section={section} setSection={setSection} />;
@@ -25,8 +27,7 @@ const Navbar = ({ section, setSection }) => {
         spy={true}
         smooth={true}
         offset={-100}
-        duration={500}
-      >
+        duration={500}>
         <img className="logo" src={logo2} alt="logo" />
       </Link>
       <div>{handleNavbar()}</div>
