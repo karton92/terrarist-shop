@@ -1,4 +1,4 @@
-<img src="/example.jpg" alt="Site view" width="90%">
+<img src="/site-view.png" alt="Site view" width="90%">
 <h2>Simple Terrarist-Shop App</h2>
 
 Welcome to my profile!<br>
