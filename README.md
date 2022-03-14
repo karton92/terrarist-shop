@@ -22,5 +22,5 @@ Enjoy it!<br>
 11. Optimization Care<br>
 <br>
 <h3>In future:</h3>
-11. Firebase & CMS Panel<br>
+12. Firebase & CMS Panel<br>
 
