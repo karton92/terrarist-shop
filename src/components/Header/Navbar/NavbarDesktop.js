@@ -2,59 +2,67 @@ import React from 'react';
 import './NavbarDesktop.scss';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeSection, sectionValue } from '../../../redux/features/sectionSlice';
 
-const NavbarDesktop = ({ section, setSection }) => {
+const NavbarDesktop = () => {
+  const activePathRoute = useSelector(sectionValue);
+  const dispatch = useDispatch();
+
   const navData = [
     {
       title: 'Home',
       toWaypoint: 'header',
       offsetValue: -100,
-      path: '/'
+      path: { activePathRoute }
     },
     {
       title: 'Sklep',
       toWaypoint: 'main',
       offsetValue: -70,
-      path: '/shop'
+      path: 'shop'
     },
     {
       title: 'Nasze gekony',
       toWaypoint: 'main',
       offsetValue: -70,
-      path: '/geckos'
+      path: 'geckos'
     },
     {
       title: 'Informacje',
       toWaypoint: 'main',
       offsetValue: -70,
-      path: '/informations'
+      path: 'informations'
     },
     {
       title: 'O nas',
       toWaypoint: 'main',
       offsetValue: -70,
-      path: '/about'
+      path: 'about'
     },
     {
       title: 'Kontakt',
       toWaypoint: 'footer',
       offsetValue: -70,
-      path: '/'
+      path: { activePathRoute }
     }
   ];
 
   return (
     <nav>
       <ul>
-        {navData.map((item) => (
-          <li key={item.title}>
+        {navData.map(({ title, toWaypoint, offsetValue, path }) => (
+          <li key={title}>
             <ScrollLink
-              to={item.toWaypoint}
+              to={toWaypoint}
               spy={true}
               smooth={true}
-              offset={item.offsetValue}
-              duration={500}>
-              <Link to={item.path}>{item.title}</Link>
+              offset={offsetValue}
+              duration={500}
+              onClick={() => {
+                dispatch(changeSection({ path }));
+              }}>
+              <Link to={path}>{title}</Link>
             </ScrollLink>
           </li>
         ))}

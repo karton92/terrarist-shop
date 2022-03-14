@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './ItemCardGeckos.scss';
 import FemaleIcon from '@mui/icons-material/Female';
 import MaleIcon from '@mui/icons-material/Male';
@@ -22,7 +21,6 @@ const ItemCard = ({ name, imgSrc, species, morph, date, sex }) => {
         <p className="species">{species}</p>
         <p>W hodowli od: {date}</p>
       </div>
-      {/* <button>Zobacz</button> */}
     </div>
   );
 };

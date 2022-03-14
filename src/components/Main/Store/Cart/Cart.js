@@ -14,9 +14,6 @@ import {
 } from '../../../../redux/features/cartSlice';
 
 // Material UI
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import Stack from '@mui/material/Stack';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 import CartItem from './CartItem';
@@ -34,7 +31,7 @@ const Cart = () => {
   const handleClick = () => {
     setOpen(true);
   };
-  const handleClose = (event, reason) => {
+  const handleClose = (reason) => {
     if (reason === 'clickaway') {
       return;
     }

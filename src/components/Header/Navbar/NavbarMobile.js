@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeSection, sectionValue } from '../../../redux/features/sectionSlice';
 
 //Material UI
 import Box from '@mui/material/Box';
@@ -24,6 +26,9 @@ import EmailIcon from '@mui/icons-material/Email';
 import './NavbarMobile.scss';
 
 const NavbarMobile = ({ section, setSection }) => {
+  const activePathRoute = useSelector(sectionValue);
+  const dispatch = useDispatch();
+
   const anchor = 'top';
   const [state, setState] = useState({
     top: false
@@ -42,55 +47,49 @@ const NavbarMobile = ({ section, setSection }) => {
       title: 'Home',
       toWaypoint: 'header',
       offsetValue: -100,
-      setSectionValue: section,
       menuIcon: <HomeIcon />,
-      path: '/'
+      path: { activePathRoute }
     },
     {
       title: 'Sklep',
       toWaypoint: 'main',
       offsetValue: -70,
-      setSectionValue: 'shop',
       menuIcon: <ShoppingCartIcon />,
-      path: '/shop'
+      path: 'shop'
     },
     {
       title: 'Nasze gekony',
       toWaypoint: 'main',
       offsetValue: -70,
-      setSectionValue: 'geckos',
       menuIcon: <PetsIcon />,
-      path: '/geckos'
+      path: 'geckos'
     },
     {
       title: 'Informacje',
       toWaypoint: 'main',
       offsetValue: -70,
-      setSectionValue: 'informations',
       menuIcon: <InfoIcon />,
-      path: '/informations'
+      path: 'informations'
     },
     {
       title: 'O nas',
       toWaypoint: 'main',
       offsetValue: -70,
-      setSectionValue: 'about',
       menuIcon: <PersonIcon />,
-      path: '/about'
+      path: 'about'
     },
     {
       title: 'Kontakt',
       toWaypoint: 'footer',
       offsetValue: -70,
-      setSectionValue: section,
       menuIcon: <EmailIcon />,
-      path: '/'
+      path: { activePathRoute }
     }
   ];
 
-  const handleList = (item) => {
-    setSection(item);
+  const handleState = (item) => {
     setState({ top: false });
+    dispatch(changeSection(item));
   };
 
   const list = (anchor) => (
@@ -100,19 +99,20 @@ const NavbarMobile = ({ section, setSection }) => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
       <List className="list-container">
-        {navData.map((item, index) => (
+        {navData.map(({ title, toWaypoint, offsetValue, path, menuIcon }) => (
           <>
             <ListItem button className="list-item">
-              <ListItemIcon>{item.menuIcon}</ListItemIcon>
+              <ListItemIcon>{menuIcon}</ListItemIcon>
               <ListItemText>
-                <li key={item.title} className="list-li">
+                <li key={title} className="list-li">
                   <ScrollLink
-                    to={item.toWaypoint}
+                    to={toWaypoint}
                     spy={true}
                     smooth={true}
-                    offset={item.offsetValue}
-                    duration={500}>
-                    <Link to={item.path}>{item.title}</Link>
+                    offset={offsetValue}
+                    duration={500}
+                    onClick={() => handleState({ path })}>
+                    <Link to={path}>{title}</Link>
                   </ScrollLink>
                 </li>
               </ListItemText>

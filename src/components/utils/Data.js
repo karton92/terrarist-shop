@@ -1,3 +1,10 @@
+//STATE
+// import {  useSelector } from 'react-redux';
+// import { changeSection, sectionValue } from '../../redux/features/sectionSlice'
+
+// const activePathRoute = useSelector(sectionValue);
+
+//IMAGES
 import gecko from '../../images/gecko.jpg';
 import spider from '../../images/spider.jpg';
 import Mia from '../../images/breeding-geckos/mia.jpg';
@@ -5,48 +12,56 @@ import Freya from '../../images/breeding-geckos/freya.jpg';
 import Loki from '../../images/breeding-geckos/loki.jpg';
 import placzki from '../../images/breeding-geckos/placzki.jpg';
 
+//ICONS
+import HomeIcon from '@mui/icons-material/Home';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PetsIcon from '@mui/icons-material/Pets';
+import InfoIcon from '@mui/icons-material/Info';
+import PersonIcon from '@mui/icons-material/Person';
+import EmailIcon from '@mui/icons-material/Email';
+
 // const navData = [
 //   {
 //     title: 'Home',
 //     toWaypoint: 'header',
 //     offsetValue: -100,
-//     setSectionValue: section,
-//     menuIcon: <HomeIcon />
+//     menuIcon: <HomeIcon />,
+//     path: { activePathRoute }
 //   },
 //   {
 //     title: 'Sklep',
 //     toWaypoint: 'main',
 //     offsetValue: -70,
-//     setSectionValue: 'shop',
-//     menuIcon: <ShoppingCartIcon />
+//     menuIcon: <ShoppingCartIcon />,
+//     path: 'shop'
 //   },
 //   {
 //     title: 'Nasze gekony',
 //     toWaypoint: 'main',
 //     offsetValue: -70,
-//     setSectionValue: 'geckos',
-//     menuIcon: <PetsIcon />
+//     menuIcon: <PetsIcon />,
+//     path: 'geckos'
 //   },
 //   {
 //     title: 'Informacje',
 //     toWaypoint: 'main',
 //     offsetValue: -70,
-//     setSectionValue: 'informations',
-//     menuIcon: <InfoIcon />
+//     menuIcon: <InfoIcon />,
+//     path: 'informations'
 //   },
 //   {
 //     title: 'O nas',
 //     toWaypoint: 'main',
 //     offsetValue: -70,
-//     setSectionValue: 'about',
-//     menuIcon: <PersonIcon />
+//     menuIcon: <PersonIcon />,
+//     path: 'about'
 //   },
 //   {
 //     title: 'Kontakt',
 //     toWaypoint: 'footer',
 //     offsetValue: -70,
-//     setSectionValue: section,
-//     menuIcon: <EmailIcon />
+//     menuIcon: <EmailIcon />,
+//     path: { activePathRoute }
 //   }
 // ];
 

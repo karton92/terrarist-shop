@@ -1,12 +1,9 @@
-import React from "react";
-import "./CartItem.scss";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
-import { useDispatch } from "react-redux";
-import {
-  incrementQnty,
-  decrementQnty,
-} from "../../../../redux/features/cartSlice";
+import React from 'react';
+import './CartItem.scss';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
+import { useDispatch } from 'react-redux';
+import { incrementQnty, decrementQnty } from '../../../../redux/features/cartSlice';
 
 function CartItem({ imgSrc, name, quantity, price }) {
   const dispatch = useDispatch();
@@ -18,12 +15,8 @@ function CartItem({ imgSrc, name, quantity, price }) {
         <div className="cart-text">
           <h3>{name}</h3>
           <div className="cart-quantity">
-            {/* <RemoveIcon /> */}
-            <RemoveIcon
-              onClick={() => dispatch(decrementQnty({ name, price }))}
-            />
+            <RemoveIcon onClick={() => dispatch(decrementQnty({ name, price }))} />
             <p className="qty-number">{quantity}</p>
-            {/* <AddIcon /> */}
             <AddIcon onClick={() => dispatch(incrementQnty({ name, price }))} />
           </div>
         </div>
