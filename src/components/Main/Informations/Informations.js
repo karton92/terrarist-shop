@@ -1,15 +1,20 @@
-import React from "react";
-import "./Informations.scss";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { geckoInfo } from "../../utils/Data";
+import React from 'react';
+import './Informations.scss';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { geckoInfo } from '../../utils/Data';
+import { motion } from 'framer-motion';
 
 const Informations = () => {
   return (
-    <div className="informations">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="informations">
       <h2>Wiedza w pigułce</h2>
       <figure className="info-img-box">
         <img
@@ -17,9 +22,7 @@ const Informations = () => {
           alt="Ise of Pins"
           title="logo"
         />
-        <p>
-          Tak wygląda Isle of Pins - naturalne środowisko gekona orzęsionego.
-        </p>
+        <p>Tak wygląda Isle of Pins - naturalne środowisko gekona orzęsionego.</p>
       </figure>
       <div className="info-accordion">
         {geckoInfo.map((item) => (
@@ -29,8 +32,7 @@ const Informations = () => {
               className="acc-summary"
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
+              id="panel1a-header">
               <Typography>{item.title}</Typography>
             </AccordionSummary>
             <AccordionDetails className="acc-details">
@@ -39,7 +41,7 @@ const Informations = () => {
           </Accordion>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
