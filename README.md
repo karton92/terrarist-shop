@@ -20,6 +20,10 @@ _Below is how install and setting up app._
    ```sh
    npm install
    ```
+#### 3. Run application
+   ```sh
+   npm start
+   ```
 
 <h2>Stack:</h2>
 1. React<br>
