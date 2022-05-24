@@ -37,7 +37,4 @@ _Below is how install and setting up app._
 9. RWD<br>
 10. Hooks<br>
 11. Optimization Care<br>
-<br>
-<h2>In future:</h2>
-12. Firebase & CMS Panel<br>
 
