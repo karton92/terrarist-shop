@@ -142,7 +142,7 @@ const storeMenu = [
     itemId: 'frog01',
     name: 'Żaby',
     imgSrc:
-      'https://media.istockphoto.com/photos/blue-poison-dart-frog-against-white-background-picture-id93218208'
+      'https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3N0YXJ0dXBpbWFnZXNfcGhvdG9fb2ZfYV9kYXJ0X2Zyb2dfYmx1ZV9pc29sYXRlZF9vbl9hbl9vZmYtd2hpdF8yYzE3NTMxMy1hMTIyLTRjODMtYWU4MS1kY2U5YzJiMjE1NzhfMi5qcGc.jpg'
   },
   {
     id: 3,
@@ -162,7 +162,7 @@ const storeMenu = [
     itemId: 'bug01',
     name: 'Karmówka',
     imgSrc:
-      'https://www.adamspetcare.com/-/media/Images/Adams2-NA/US/Photos/Blog/Article/crickets.jpg'
+      'https://www.shutterstock.com/image-photo/cockroaches-male-female-white-background-600nw-669986401.jpg'
   },
   {
     id: 6,
@@ -337,8 +337,7 @@ const storeItems = [
       {
         id: 2,
         name: 'Brachypelma boehmei',
-        imgSrc:
-          'https://beverleybugsandreptiles.co.uk/wp-content/uploads/2020/11/brachypelma_boehmei.jpg',
+        imgSrc: 'https://jadowite.pl/1128-large_default/brachypelma-boehmei-l1-05cm.jpg',
         price: 40,
         description: 'Treść opisu w przygotowaniu'
       },
@@ -346,7 +345,7 @@ const storeItems = [
         id: 3,
         name: 'Chromatopelma cyaneopubescens',
         imgSrc:
-          'https://arent.pl/wp-content/uploads/2020/03/Chromatopelma-cyaneopubescens-13-scaled.jpg',
+          'https://kraina-mrowek.pl/wp-content/uploads/2022/08/Chromatopelma-cyaneopubescens.jpg',
         price: 50,
         description: 'Treść opisu w przygotowaniu'
       },
@@ -354,14 +353,14 @@ const storeItems = [
         id: 4,
         name: 'Harpactira pulchripes',
         imgSrc:
-          'https://arent.pl/wp-content/gallery/harpactira-pulchripes/thumbs/thumbs_Harpactira-pulchripes-3.JPG',
+          'https://a.allegroimg.com/original/1192c6/ab6b3d17473eb58963dbda01c774/Harpactira-pulchripes-ptasznik-L2',
         price: 250,
         description: 'Treść opisu w przygotowaniu'
       },
       {
         id: 5,
         name: 'Haplopelma lividum',
-        imgSrc: 'https://www.aquasnack.co.uk/wp-content/uploads/2020/07/Haplopelma-lividum.jpg',
+        imgSrc: 'https://a.allegroimg.com/s1024/0ce3cc/c12f82ba4f7688c52b42dfab4611',
         price: 150,
         description: 'Treść opisu w przygotowaniu'
       },
@@ -375,7 +374,7 @@ const storeItems = [
       {
         id: 7,
         name: 'Caribena versicolor',
-        imgSrc: 'https://arent.pl/wp-content/uploads/2020/03/Caribena-versicolor-8-scaled.jpg',
+        imgSrc: 'https://arent.pl/wp-content/uploads/2021/11/Caribena-versicolor-8-scaled-1-1.jpg',
         price: 50,
         description: 'Treść opisu w przygotowaniu'
       },
@@ -401,7 +400,8 @@ const storeItems = [
       {
         id: 1,
         name: 'Świerszcz bananowy - 100 szt',
-        imgSrc: 'https://zoo.opole.pl/wp-content/uploads/2015/06/swierszczbana-1107x831.jpg',
+        imgSrc:
+          'https://a.allegroimg.com/original/11e81c/a7917823414385e28b40498c3648/Swierszcz-bananowy-swierszcze-100-ml',
         price: 30,
         description:
           'Świerszcze bananowe (Gryllodes sigillatus) dorastają do wielkości od 20 do 25mm. To idealny, bezpieczny i pełnowartościowy pokarm dla młodych pająków oraz niewielkich płazów (drzewołazy) oraz małych jaszczurek wymagających drobnego pokarmu. Owady pochodzą z profesjonalnej hodowli, kupując u nas kupujesz świerszcze bezpośrednio od hodowcy.'
@@ -417,7 +417,7 @@ const storeItems = [
       {
         id: 3,
         name: 'Karaczan turecki - 100 szt',
-        imgSrc: 'https://i0.wp.com/terrazoo.pl/wp-content/uploads/2020/04/turek.png?fit=801%2C463',
+        imgSrc: 'https://www.lesmantes.pl/images/karaczan_turecki_nimfa_1.jpg',
         price: 40,
         description:
           'Karaczany tureckie (Shelfordella lateralis) dorastają do wielkości od 22 do 28mm. To idealny, bezpieczny i pełnowartościowy pokarm dla młodych pająków oraz niewielkich płazów (drzewołazy) oraz małych jaszczurek wymagających drobnego pokarmu. Owady pochodzą z profesjonalnej hodowli, kupując u nas kupujesz świerszcze bezpośrednio od hodowcy.'
@@ -442,7 +442,7 @@ const storeItems = [
         id: 5,
         name: 'Pangea czerwona z owadami - 100g',
         imgSrc:
-          'https://a.allegroimg.com/original/110722/3cc9bf68487d9e20274142915356/PANGEA-Fruit-mix-with-Insects-454-g-czerwona',
+          'https://a.allegroimg.com/original/112621/35c7a54a4e0cb1029d07daf19de9/Pangea-czerwona-z-owadami-Pangea-with-insects-100-gram-karma-gekon-orzesion',
         price: 70,
         description:
           'Najchętniej jedzone pokarmy dla gekonów na świecie. Pangea to pokarm dla gekonów z rodzaju Rhacodactylus, Phelsuma, Lygodactylus oraz innych owocożernych gatunków. Zawiera aturalne suszone owoce, pyłkek pszczeli, probiotyki dla większej odporności oraz izolat białka serwatki, suszone białko jaj oraz spiruline.'
@@ -531,8 +531,7 @@ const storeItems = [
       {
         id: 3,
         name: 'Miseczka/wyspa wieszana 2 w 1  Repti-Zoo',
-        imgSrc:
-          'https://bioterr.pl/environment/cache/images/500_500_productGfx_4625/repti-zoo-2in1-miseczki-z-rampa-dla-zolwia-.jpg',
+        imgSrc: 'https://cdn.rostlinna-akvaria.cz/upload/70315-0909532746.jpg',
         price: 60,
         description:
           'Wisząca miseczka na pokarm i wodę oraz rampa dla zwierzęcia. W zestawie znajduje się uchwyt przyssawkowy z systemem dokręcenia/dociskania przyssawki.'
